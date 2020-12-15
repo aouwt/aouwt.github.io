@@ -1,0 +1,62 @@
+body {
+	font-family: monospace;
+	font-size: 16px;
+	cursor: url(css/csr.cur);
+	background-color: blue;
+	color: white;
+	position: relative;
+	top: 0px;
+	margin: 0px;
+	left: 0px;
+    
+}
+
+
+.nav {
+	position: sticky;
+}
+
+.nav_bar {
+	top: 0px;
+	margin: 0px;
+	left: 0px;
+	background-color: lightgrey;
+	color: black;
+}
+
+.nav_link {
+	background-color: lightgrey;
+	color: black;
+	text-decoration: none;
+}
+
+.nav_title {
+	background-color: lightgrey;
+	color: black;
+	text-align: center;
+	position: relative;
+	top: -18px;
+}
+
+.nav_line {
+	background-color: blue;
+	color: lightgrey;
+	text-align: center;
+}
+
+.body {
+	all: inherit;
+	background-color: blue;
+	color: white;
+	position: relative;
+	top: -32px;
+	left: 14px;
+}
+
+.foot {
+    background-color: cyan;
+    color: black;
+    position: sticky;
+    bottom: 0px;
+}
+
