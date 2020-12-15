@@ -30,6 +30,12 @@ body {
 	text-decoration: none;
 }
 
+.nav_link_highlighted {
+	background-color: black;
+	color: lightgrey;
+	text-decoration: none;
+}
+
 .nav_title {
 	background-color: lightgrey;
 	color: black;
@@ -54,9 +60,22 @@ body {
 }
 
 .foot {
-    background-color: cyan;
-    color: black;
-    position: sticky;
-    bottom: 0px;
+	background-color: cyan;
+	color: black;
+	position: sticky;
+	bottom: 0px;
 }
 
+.message {
+	background-color: lightgrey;
+	color: black;
+	border-color: black;
+	border-style: solid;
+	border-size: 1px;
+	text-align: center;
+	vertical-align: center;
+}
+
+a {
+	color: cyan;
+}
