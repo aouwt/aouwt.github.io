@@ -8,7 +8,6 @@ body {
 	top: 0px;
 	margin: 0px;
 	left: 0px;
-    
 }
 
 
@@ -17,6 +16,7 @@ body {
 }
 
 .nav_bar {
+	position: sticky;
 	top: 0px;
 	margin: 0px;
 	left: 0px;
@@ -25,12 +25,14 @@ body {
 }
 
 .nav_link {
+	position: sticky;
 	background-color: lightgrey;
 	color: black;
 	text-decoration: none;
 }
 
 .nav_link_highlighted {
+	position: sticky;
 	background-color: black;
 	color: lightgrey;
 	text-decoration: none;
@@ -41,7 +43,7 @@ body {
 	color: black;
 	text-align: center;
 	position: relative;
-	top: -18px;
+	top: -24px;
 }
 
 .nav_line {
@@ -52,11 +54,14 @@ body {
 
 .body {
 	all: inherit;
+	z-index: -10;
+	width: 99%;
 	background-color: blue;
 	color: white;
 	position: relative;
 	top: -32px;
 	left: 14px;
+	word-break: break-word;
 }
 
 .foot {
@@ -76,6 +81,4 @@ body {
 	vertical-align: center;
 }
 
-a {
-	color: cyan;
-}
+a {color: cyan;}
