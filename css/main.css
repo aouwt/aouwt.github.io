@@ -76,6 +76,7 @@ body {
 	border-color: black;
 	border-style: solid;
 	border-size: 1px;
+	width: 25%;
 	text-align: center;
 	vertical-align: center;
 }
