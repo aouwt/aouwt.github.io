@@ -13,7 +13,6 @@ body {
 
 .nav {
 	position: sticky;
-	z-index: 10px;
 }
 
 .nav_bar {
@@ -45,7 +44,6 @@ body {
 	text-align: center;
 	position: relative;
 	top: -24px;
-	z-index: 10px;
 }
 
 .nav_line {
@@ -63,7 +61,6 @@ body {
 	top: -32px;
 	left: 14px;
 	word-break: break-word;
-	z-index: 0px;
 }
 
 .foot {
@@ -81,7 +78,6 @@ body {
 	border-size: 1px;
 	text-align: center;
 	vertical-align: center;
-	z-index: 2px;
 }
 
 a {color: cyan;}
