@@ -4,14 +4,13 @@ body {
 	cursor: url(css/csr.cur);
 	background-color: blue;
 	color: white;
-	position: relative;
 	top: 0px;
 	margin: 0px;
 	left: 0px;
 }
 
 .nav {
-	position: sticky;
+	position: fixed;
 }
 
 .nav_bar {
@@ -41,32 +40,37 @@ body {
 	background-color: lightgrey;
 	color: black;
 	text-align: center;
-	position: relative;
-	top: -24px;
+	position: fixed;
+	top: 14pt;
 }
 
 .nav_line {
 	background-color: blue;
 	color: lightgrey;
 	text-align: center;
+	position: fixed;
+	top: 14pt;
+	width: 100%;
 }
 
 .body {
 	all: inherit;
-	width: 99%;
-	background-color: blue;
+	background-color: transparent;
 	color: white;
 	position: relative;
-	top: -32px;
-	left: 14px;
+	width: 95%;
+	left: 2.5%;
 	word-break: break-word;
 }
 
 .foot {
 	background-color: cyan;
 	color: black;
-	position: sticky;
-	bottom: 0px;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	margin: 0px;
+	height: 14pt;
 }
 
 .message {
