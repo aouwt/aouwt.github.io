@@ -7,10 +7,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run Linker
+        shell: bash
         run: |
-          echo Running link.sh
+          echo Running linker_bulk
           cd src
-          ./link.sh
+          ./linker_bulk
           cd ..
 
       - name: Extract branch name
