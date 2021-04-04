@@ -2,7 +2,7 @@
 <html>
  <head>
   <link rel="stylesheet" href="/css/main.css">
-  <title><!--LINKER:PUT:name--> - all-other-usernames-were-taken</title>
+  <title><!--LINKER:PUT:name--><!--LINKER:IF:customname; - all-other-usernames-were-taken--></title>
  </head>
  <body>
   <p class="nav">

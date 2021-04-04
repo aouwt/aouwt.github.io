@@ -5,7 +5,7 @@ ON ERROR GOTO erh
 GOTO Start
 
 erh:
-PRINT USING "ERROR ### AT ###! (##/25)"; ERR, _ERRORLINE, erno%
+PRINT USING "ERROR ### AT ###_! (##/25)"; ERR, _ERRORLINE, erno%
 erno% = erno% + 1
 IF erno% > 25 THEN
     PRINT "Too many errors; halting!"
@@ -17,9 +17,10 @@ Start:
 PRINT "HTML Linker v1 - Modified for integration to GitHub Actions"
 PRINT "Regular version at https://github.com/all-other-usernames-were-taken/all-other-usernames-were-taken/blob/main/html%20linker/"
 PRINT "------"
-PRINT "SHELL> find * -name '*.html' > ./dirlist.txt"
-SHELL "find * -name '*.html' > ./dirlist.txt"
-PRINT "Opening output"
+PRINT "Initializing"
+PRINT " SHELL> find * -name '*.html' > ./dirlist.txt"
+SHELL " find * -name '*.html' > ./dirlist.txt"
+PRINT " Opening output"
 dir% = FREEFILE
 OPEN "./dirlist.txt" FOR INPUT AS #dir%
 DO
@@ -27,13 +28,13 @@ DO
     PRINT "Linking file: " + file$
     f% = FREEFILE
     OPEN file$ + ".linked" FOR OUTPUT AS #f%
-    PRINT "Linking"
+    PRINT " Running linker"
     PRINT #f%, linker$(LoadFile$(file$));
     DIM q AS STRING * 1: q = CHR$(34)
     s$ = "mv " + q + "./" + file$ + ".linked" + q + " " + q + "../" + file$ + q + " -u"
-    PRINT "SHELL DONTWAIT> " + s$
+    PRINT " SHELL DONTWAIT> " + s$
     SHELL _DONTWAIT s$
-    PRINT "Closing"
+    PRINT " Closing file"
     CLOSE #f%
 LOOP UNTIL EOF(dir%)
 PRINT "All done, closing and deleting dirlist"
@@ -42,24 +43,28 @@ KILL "./dirlist.txt"
 SYSTEM
 
 FUNCTION linker$ (f AS STRING)
-    PRINT "Running linker"
     CONST LinkBegin = "<!--LINKER:"
     CONST LinkEnd = "-->"
     TYPE var
         v AS STRING
         n AS STRING
     END TYPE
-    DIM vars(100) AS var
+    DIM vars(100) AS var, lstart AS _UNSIGNED LONG, lend AS _UNSIGNED LONG
     DO
         lstart = INSTR(f, LinkBegin)
         lend = INSTR(f, LinkEnd)
+        PRINT USING "  lstart=####; lend=####"; lstart; lend
         IF (lstart = 0) OR (lend = 0) THEN EXIT DO
 
         cmd$ = MID$(f, lstart + LEN(LinkBegin), lend - lstart - LEN(LinkBegin))
+        PRINT USING "  cmd$='&'"; cmd$
 
         sep% = INSTR(cmd$, ":")
         act$ = LEFT$(cmd$, sep% - 1)
         arg$ = MID$(cmd$, sep% + 1)
+        PRINT USING "  sep%=####"; sep%
+        PRINT USING "  act$='&'"; act$
+        PRINT USING "  arg$='&'"; arg$
 
         SELECT CASE act$
             CASE "LINK"
@@ -69,11 +74,15 @@ FUNCTION linker$ (f AS STRING)
                 vars(nextvar%).n = arg$
                 vars(nextvar%).v = "TRUE"
                 nextvar% = nextvar% + 1
+                PRINT USING "   nextvar%=###"; nextvar%
 
             CASE "IF"
                 sep% = INSTR(arg$, ";")
                 act$ = MID$(arg$, sep% + 1)
                 arg$ = LEFT$(arg$, sep% - 1)
+                PRINT USING "   sep%=####"; sep%
+                PRINT USING "   act$='&'"; act$
+                PRINT USING "   arg$='&'"; arg$
                 FOR i% = 0 TO nextvar%
                     IF vars(i%).n = arg$ THEN o$ = act$: EXIT FOR
                 NEXT
@@ -82,6 +91,9 @@ FUNCTION linker$ (f AS STRING)
                 sep% = INSTR(arg$, ";")
                 o$ = MID$(arg$, sep% + 1)
                 act$ = LEFT$(arg$, sep% - 1)
+                PRINT USING "   sep%=####"; sep%
+                PRINT USING "   act$='&'"; act$
+                PRINT USING "   arg$='&'"; o$
                 FOR i% = 0 TO nextvar%
                     IF vars(i%).n = act$ THEN o$ = "": EXIT FOR
                 NEXT
@@ -90,9 +102,13 @@ FUNCTION linker$ (f AS STRING)
                 sep% = INSTR(arg$, "=")
                 act$ = MID$(arg$, sep% + 1)
                 arg$ = LEFT$(arg$, sep% - 1)
+                PRINT USING "   sep%=####"; sep%
+                PRINT USING "   act$='&'"; act$
+                PRINT USING "   arg$='&'"; arg$
                 vars(nextvar%).n = arg$
                 vars(nextvar%).v = act$
                 nextvar% = nextvar% + 1
+                PRINT USING "   nextvar%=###"; nextvar%
 
             CASE "PUT"
                 FOR i% = 0 TO nextvar%
@@ -102,7 +118,13 @@ FUNCTION linker$ (f AS STRING)
             CASE ELSE
                 PRINT "Error: Invalid command " + cmd$
         END SELECT
-        f = LEFT$(f, lstart - 1) + o$ + MID$(f, lend + LEN(LinkEnd))
+        o2$ = ""
+        FOR i% = 1 TO LEN(o$) 'so you can do multiple layers of stuff    (like <!--LINKER:IF:a;<!--LINKER:PUT:a--\>-->
+            IF ASC(o$, i%) <> 92 THEN o2$ = o2$ + CHR$(ASC(o$, i%)) '\
+        NEXT
+        'PRINT USING "  o$='&'"; o$
+        'PRINT USING "  o2$='&'"; o2$
+        f = LEFT$(f, lstart - 1) + o2$ + MID$(f, lend + LEN(LinkEnd))
         o$ = ""
     LOOP
     linker$ = f
