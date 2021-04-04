@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="/css/main.css">
+  <title><!--LINKER:PUT:name--> - all-other-usernames-were-taken</title>
+ </head>
+ <body>
+  <p class="nav">
+   <div class="nav_bar">
+    &nbsp;&nbsp;
+    <a class="nav_link<!--LINKER:IF:home;_highlighted-->" href="/index.html">Home</a>&nbsp;
+    <a class="nav_link<!--LINKER:IF:blog;_highlighted-->" href="/blog.html">Blog</a>&nbsp;
+    <a class="nav_link<!--LINKER:IF:archives;_highlighted-->" href="/archives/index.html">Archives</a>&nbsp;
+    <a class="nav_link<!--LINKER:IF:stuff;_highlighted-->" href="/stuff/index.html">Stuff</a>&nbsp;
+    <a class="nav_link" href="https://github.com/all-other-usernames-were-taken">GitHub</a>&nbsp;
+    <a class="nav_link" href="https://scratch.mit.edu/users/efils">Scratch</a>&nbsp;
+    <a class="nav_link" href="https://esolangs.org/wiki/User:Not_applicable">Esolangs Wiki</a>
+   </div>
+   <div class="nav_line"><hr color=lightgrey><span class="nav_title" <!--LINKER:IF:editable;contenteditable=true-->><!--LINKER:PUT:title--></span></div>
+  </p>
+  <div class="body">
