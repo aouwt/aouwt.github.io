@@ -1,0 +1,7 @@
+This is a test file, to test the linker.
+The next line should simply be empty, single quotes.
+'<!--LINKER:IF:test;It did not work-->'
+The following lines should only say, "This is working" in single quotes:
+- '<!--LINKER:IFN:test;This is working-->'
+- '<!--LINKER:SET:test--><!--LINKER:IF:test;This is working--><!--LINKER:IFN:test;This is NOT working-->'
+- '<!--LINKER:STR:teststr=This is working--><!--LINKER:PUT:teststr-->'
