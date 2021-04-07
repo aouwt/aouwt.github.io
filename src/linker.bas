@@ -2,7 +2,7 @@ $CONSOLE:ONLY
 _DEST _CONSOLE
 'Sorry for spaghet, this was hacked together real quick.
 ON ERROR GOTO erh
-GOTO Start
+IF COMMAND$(1) = "bulkmode" GOTO StartBulk
 
 erh:
 PRINT USING "ERROR ### AT ###_! (##/25)"; ERR, _ERRORLINE, erno%
@@ -13,13 +13,13 @@ IF erno% > 25 THEN
 END IF
 RESUME NEXT
 
-Start:
-PRINT "HTML Linker v1 - Modified for integration to GitHub Actions"
+StartBulk:
+PRINT "HTML Linker v1 with bulkmode"
 PRINT "Regular version at https://github.com/all-other-usernames-were-taken/all-other-usernames-were-taken/blob/main/html%20linker/"
 PRINT "------"
 PRINT "Initializing"
 PRINT " SHELL> find * -name '*.html' > ./dirlist.txt"
-SHELL " find * -name '*.html' > ./dirlist.txt"
+SHELL " find . -name '*.html' > ./dirlist.txt"
 PRINT " Opening output"
 dir% = FREEFILE
 OPEN "./dirlist.txt" FOR INPUT AS #dir%
@@ -39,7 +39,7 @@ DO
 LOOP UNTIL EOF(dir%)
 PRINT "All done, closing and deleting dirlist"
 CLOSE #dir%
-KILL "./dirlist.txt"
+'KILL "./dirlist.txt"
 SYSTEM
 
 FUNCTION linker$ (f AS STRING)
@@ -52,7 +52,7 @@ FUNCTION linker$ (f AS STRING)
     DIM vars(100) AS var, lstart AS _UNSIGNED LONG, lend AS _UNSIGNED LONG
     DO
         lstart = INSTR(f, LinkBegin)
-        lend = INSTR(f, LinkEnd)
+        lend = INSTR(lstart, f, LinkEnd)
         PRINT USING "  lstart=####; lend=####"; lstart; lend
         IF (lstart = 0) OR (lend = 0) THEN EXIT DO
 
@@ -68,7 +68,8 @@ FUNCTION linker$ (f AS STRING)
 
         SELECT CASE act$
             CASE "LINK"
-                o$ = LoadFile(arg$)
+                o2$ = "<!-- LINK BEGIN " + arg$ + " -->" + LoadFile(arg$) + "<!-- LINK END " + arg$ + " -->"
+                o$ = ""
 
             CASE "SET"
                 vars(nextvar%).n = arg$
@@ -118,14 +119,14 @@ FUNCTION linker$ (f AS STRING)
             CASE ELSE
                 PRINT "Error: Invalid command " + cmd$
         END SELECT
-        o2$ = ""
         FOR i% = 1 TO LEN(o$) 'so you can do multiple layers of stuff    (like <!--LINKER:IF:a;<!--LINKER:PUT:a--\>-->
             IF ASC(o$, i%) <> 92 THEN o2$ = o2$ + CHR$(ASC(o$, i%)) '\
         NEXT
-        'PRINT USING "  o$='&'"; o$
-        'PRINT USING "  o2$='&'"; o2$
+        PRINT USING "  o$='&'"; o$
+        PRINT USING "  o2$='&'"; o2$
         f = LEFT$(f, lstart - 1) + o2$ + MID$(f, lend + LEN(LinkEnd))
         o$ = ""
+        o2$ = ""
     LOOP
     linker$ = f
 END FUNCTION

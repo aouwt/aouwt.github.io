@@ -1,28 +1,7 @@
-
-
-
-<!DOCTYPE html>
-<html>
- <head>
-  <link rel="stylesheet" href="/css/main.css">
-  <title>Scratch Archives</title>
- </head>
- <body>
-  <p class="nav">
-   <div class="nav_bar">
-    &nbsp;&nbsp;
-    <a class="nav_link" href="/index.html">Home</a>&nbsp;
-    <a class="nav_link" href="/blog.html">Blog</a>&nbsp;
-    <a class="nav_link_highlighted" href="/archives/index.html">Archives</a>&nbsp;
-    <a class="nav_link" href="/stuff/index.html">Stuff</a>&nbsp;
-    <a class="nav_link" href="https://github.com/all-other-usernames-were-taken">GitHub</a>&nbsp;
-    <a class="nav_link" href="https://scratch.mit.edu/users/efils">Scratch</a>&nbsp;
-    <a class="nav_link" href="https://esolangs.org/wiki/User:Not_applicable">Esolangs Wiki</a>
-   </div>
-   <div class="nav_line"><hr color=lightgrey><span class="nav_title" >ARCHIVES/SCRATCH</span></div>
-  </p>
-  <div class="body">
-
+<!--LINKER:SET:archives-->
+<!--LINKER:STR:title=ARCHIVES/SCRATCH-->
+<!--LINKER:STR:name=Scratch Archives-->
+<!--LINKER:LINK:include/head-->
 <h1>Scratch Archives</h1>
 <p>Here are some programs that I made in Scratch a <b>long</b> time ago and either aren't finished enough to be publicly avaliable on my Scratch page <i>or</i> aren't up to my quality standards.</p>
 <ul>
@@ -33,9 +12,4 @@
  <li><a href="/archives/quick.io.sb3">Quick.io (Sep 2018)</a>, an agar.io clone that barely works.</li>
  <li><a href="/archives/untitled-125.sb3">Untitled-125 (Sep 2020)</a>, the most recent one here. It's the beginnings of a file upload system with a cool UI</li>
 </ul>
-  </div>
-  <div class="foot"><p>&copy;2020 all-other-usernames-were-taken, all rights reserved, blah blah blah.</p></div>
- </body>
- <foot></foot>
-</html>
-
+<!--LINKER:LINK:include/foot-->

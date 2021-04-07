@@ -8,11 +8,7 @@ jobs:
 
       - name: Run Linker
         shell: bash
-        run: |
-          echo Running linker_bulk
-          cd src
-          ./linker_bulk
-          cd ..
+        run: ./src/linker.sh
 
       - name: Extract branch name
         shell: bash

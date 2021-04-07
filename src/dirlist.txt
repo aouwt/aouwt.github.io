@@ -1,0 +1,9 @@
+./linkertest.html
+./index.html
+./stuff/index.html
+./stuff/textedit.html
+./stuff/game.html
+./stuff/useless/loop.html
+./stuff/notepad.html
+./404.html
+./blog.html

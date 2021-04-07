@@ -1,5 +1,7 @@
-  </div>
-  <div class="foot"><p>&copy;2020 all-other-usernames-were-taken, all rights reserved, blah blah blah.</p></div>
+   </div>
+  </main>
+  <footer>
+   <div class="foot"><p>&copy;2020 all-other-usernames-were-taken, all rights reserved, blah blah blah.</p></div>
+  </footer>
  </body>
- <foot></foot>
 </html>
