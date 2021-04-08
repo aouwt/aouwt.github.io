@@ -27,7 +27,6 @@
       &nbsp;&nbsp;
       <a class="nav_link<!--LINKER:IF:home;_highlighted-->" href="/index.html">Home</a>&nbsp;
       <a class="nav_link<!--LINKER:IF:blog;_highlighted-->" href="/blog.html">Blog</a>&nbsp;
-      <a class="nav_link<!--LINKER:IF:archives;_highlighted-->" href="/archives/index.html">Archives</a>&nbsp;
       <a class="nav_link<!--LINKER:IF:stuff;_highlighted-->" href="/stuff/index.html">Stuff</a>&nbsp;
       <a class="nav_link" href="https://github.com/all-other-usernames-were-taken">GitHub</a>&nbsp;
       <a class="nav_link" href="https://scratch.mit.edu/users/efils">Scratch</a>&nbsp;
