@@ -14,10 +14,11 @@ body {
 }
 
 .nav_bar {
-	position: sticky;
+	position: fixed;
 	top: 0px;
 	margin: 0px;
 	left: 0px;
+	width: 100%;
 	background-color: lightgrey;
 	color: black;
 }
@@ -54,12 +55,13 @@ body {
 }
 
 .body {
-	all: inherit;
+	z-index: -1;
 	background-color: transparent;
 	color: white;
-	position: relative;
-	width: 95%;
-	left: 2.5%;
+	position:absolute;
+	margin-left: 14pt;
+	margin-right: 14pt;
+	width: auto;
 	word-break: break-word;
 }
 
@@ -74,17 +76,18 @@ body {
 }
 
 .message {
+	position: fixed;
 	background-color: lightgrey;
 	color: black;
-	border-color: black;
-	border-style: solid;
-	/*border-size: 1px;*/
-	width: 25%;
+	border: 1pt solid black;
 	text-align: center;
-	left: 50vw;
-	top: 50vh;
-	margin: auto;
+	margin-left: 40vw;
+	width: 20%;
+	left: 24pt; /*dont ask me how this works*/
+	/*margin-right: 40%;*/
+	margin-top: 10%;
 	vertical-align: middle;
 }
 
 a {	color: cyan;	}
+
