@@ -21,6 +21,7 @@ body {
 	width: 100%;
 	background-color: lightgrey;
 	color: black;
+	min-width: 54ch;
 }
 
 .nav_link {
