@@ -17,6 +17,20 @@ html {
   opacity: 95%;
   border: 1px white solid;
   z-index: 2;
+  animation: rotate 300s infinite;
+}
+
+.header_bar h1 {
+  animation: rotate 300s infinite reverse;
+  animation-delay: 150s;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
 
 h1 {
@@ -48,9 +62,4 @@ a {
 
 .content:hover {
   transform: translateX(10px);
-}
-
-@keyframes content_ani {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
