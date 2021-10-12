@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="/css/old.css">
+  <title><!--LINKER:PUT:name--><!--LINKER:IFN:customname; - all-other-usernames-were-taken--></title>
+  <html lang="en">
+  <meta charset="utf-8"/>
+  <!--LINKER:IFN:nodescription;
+   <!-\-LINKER:IF:description;
+    <meta name="description" content="<!-\\-LINKER:PUT:description-\\->" />
+   -\-><!-\-LINKER:IFN:description;
+    <meta name="description" content="all-other-usernames-were-taken's personal site. No other description provided, please let me know so I can add one. Thanks!" />
+   -\->
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="all-other-usernames-were-taken" />
+  <!--LINKER:IFN:nokwds;
+   <meta name="keywords" content="all-other-usernames-were-taken, efils, givemeagoodun, givemeagooduns_un, untitled person<!-\-LINKER:IF:keywords;, <!-\\-LINKER:PUT:keywords-\\->-\->" />
+  -->
+  <!--LINKER:PUT:head-->
+ </head>
+ <body>
+  <header>
+   <p class="nav">
+    <nav>
+     <div class="nav_bar">
+      &nbsp;&nbsp;
+      <a class="nav_link<!--LINKER:IF:home;_highlighted-->" href="/old/index.html">Home</a>&nbsp;
+      <a class="nav_link<!--LINKER:IF:blog;_highlighted-->" href="/old/blog.html">Blog</a>&nbsp;
+      <a class="nav_link<!--LINKER:IF:stuff;_highlighted-->" href="/old/stuff/index.html">Stuff</a>&nbsp;
+      <a class="nav_link" href="https://github.com/all-other-usernames-were-taken">GitHub</a>&nbsp;
+      <a class="nav_link" href="https://scratch.mit.edu/users/efils">Scratch</a>&nbsp;
+      <a class="nav_link" href="https://esolangs.org/wiki/User:Not_applicable">Esolangs Wiki</a>
+     </div>
+    </nav>
+   <div class="nav_line"><hr color=lightgrey><span class="nav_title" <!--LINKER:IF:editable;contenteditable=true-->><!--LINKER:PUT:title--></span></div>
+   </p>
+  </header>
+  <main>
+   <div class="body">
