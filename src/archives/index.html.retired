@@ -1,0 +1,15 @@
+<!--LINKER:SET:archives-->
+<!--LINKER:STR:title=ARCHIVES/SCRATCH-->
+<!--LINKER:STR:name=Scratch Archives-->
+<!--LINKER:LINK:include/head-->
+<h1>Scratch Archives</h1>
+<p>Here are some programs that I made in Scratch a <b>long</b> time ago and either aren't finished enough to be publicly avaliable on my Scratch page <i>or</i> aren't up to my quality standards.</p>
+<ul>
+ <li><a href="/archives/scratchweb.sb3">ScratchWEB (Apr 2018)</a>, a "mini-internet" of sorts using cloud variables. Broke with Scratch 3.0, and I don't think it worked that much before.</li>
+ <li><a href="/archives/ultrastudio.sb3">Ultra Studio (Dec 2017)</a>, I don't know what the heck it was supposed to be. I just put it here 'cause I thought the "UI" looked cool.</li>
+ <li><a href="/archives/untitled-105.sb3">Untitled-105 (Oct 2019)</a>, a simple assignment book thing. Put it on here 'cause I liked the "UI".</li>
+ <li><a href="/archives/kooldraw.sb3">KoolDraw (Nov 2016)</a>, a neat drawing program that makes graphical effects and stuff.</li>
+ <li><a href="/archives/quick.io.sb3">Quick.io (Sep 2018)</a>, an agar.io clone that barely works.</li>
+ <li><a href="/archives/untitled-125.sb3">Untitled-125 (Sep 2020)</a>, the most recent one here. It's the beginnings of a file upload system with a cool UI</li>
+</ul>
+<!--LINKER:LINK:include/foot-->

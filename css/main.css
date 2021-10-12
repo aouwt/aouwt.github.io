@@ -2,6 +2,7 @@ html {
   font-family: monospace;
   background-image: linear-gradient(black, purple);
 }
+
 .header_bar {
   width: 100%;
   text-align: center;
@@ -12,15 +13,6 @@ html {
   opacity: 95%;
   border: 1px white solid;
   z-index: 2;
-}
-
-.content:not(:hover) {
-  animation: header_ani 1s ease-in-out;
-}
-
-@keyframes header_ani {
-    0% { transform: rotateX(0deg); }
-  100% { transform: rotateX(360deg); }
 }
 
 h1 {
@@ -40,7 +32,6 @@ h2 {
   border: 1px white solid;
   text-align: center;
   max-width: 500pt;
-  content-align: center;
   margin: auto;
 }
 a {
