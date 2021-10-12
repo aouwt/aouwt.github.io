@@ -1,24 +1,29 @@
 name: CI
-on: push
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+  
 jobs:
-  run-linker:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+    run-linker:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
 
-      - name: Run Linker
-        shell: bash
-        run: ./src/linker.sh
+            - name: Run Linker
+              shell: bash
+              run: ./src/linker.sh
 
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
+            - name: Extract branch name
+              shell: bash
+              run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+              id: extract_branch
 
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          author_name: Not-a-bot
-          message: Run HTML linker
-          branch: ${{ steps.extract_branch.outputs.branch }}
+            - name: Commit & Push changes
+              uses: actions-js/push@master
+              with:
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    author_name: Not-a-bot
+                    message: Run HTML linker
+                    branch: min

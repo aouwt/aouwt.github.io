@@ -1,94 +1,48 @@
-body {
-	font-family: monospace;
-	font-size: 16px;
-	cursor: url(https://all-other-usernames-were-taken.github.io/css/cur.cur), default;
-	background-color: blue;
-	color: white;
-	top: 0px;
-	margin: 0px;
-	left: 0px;
+html {
+  font-family: monospace;
+  background-image: linear-gradient(black, purple);
+}
+.header_bar {
+  width: 100%;
+  text-align: center;
+  position: sticky;
+  top: 1%;
+  
+  background-color: lightgrey;
+  opacity: 95%;
+  border: 1px white solid;
+  z-index: 2;
 }
 
-.nav {
-	position: fixed;
+.content:not(:hover) {
+  animation: header_ani 1s ease-in-out;
 }
 
-.nav_bar {
-	position: fixed;
-	top: 0px;
-	margin: 0px;
-	left: 0px;
-	width: 100%;
-	background-color: lightgrey;
-	color: black;
-	min-width: 54ch;
+@keyframes header_ani {
+    0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(360deg); }
 }
 
-.nav_link {
-	position: sticky;
-	background-color: lightgrey;
-	color: black;
-	text-decoration: none;
+h1 {
+  color: white;
+  text-shadow: .1em .1em black;
+  background-color: rgba(0,0,255, 0.5);
 }
 
-.nav_link_highlighted {
-	position: sticky;
-	background-color: black;
-	color: lightgrey;
-	text-decoration: none;
+h2 {
+  color: white;
+  text-shadow: .05em .05em black;
+  background-color: rgba(0,0,255, .5);
 }
-
-.nav_title {
-	background-color: lightgrey;
-	color: black;
-	text-align: center;
-	position: fixed;
-	top: 14pt;
+.content {
+  background-color: lightgrey;
+  opacity: 90%;
+  border: 1px white solid;
+  text-align: center;
+  max-width: 500pt;
+  content-align: center;
+  margin: auto;
 }
-
-.nav_line {
-	background-color: blue;
-	color: lightgrey;
-	text-align: center;
-	position: fixed;
-	top: 14pt;
-	width: 100%;
+a {
+  color: darkblue;
 }
-
-.body {
-	z-index: -1;
-	background-color: transparent;
-	color: white;
-	position:absolute;
-	margin-left: 14pt;
-	margin-right: 14pt;
-	width: auto;
-	word-break: break-word;
-}
-
-.foot {
-	background-color: cyan;
-	color: black;
-	position: fixed;
-	bottom: 0;
-	width: 100vw;
-	margin: 0px;
-	height: 14pt;
-}
-
-.message {
-	position: fixed;
-	background-color: lightgrey;
-	color: black;
-	border: 1pt solid black;
-	text-align: center;
-	margin-left: 40vw;
-	width: 20%;
-	left: 24pt; /*dont ask me how this works*/
-	/*margin-right: 40%;*/
-	margin-top: 10%;
-	vertical-align: middle;
-}
-
-a {	color: cyan;	}
-

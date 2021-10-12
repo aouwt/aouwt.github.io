@@ -1,0 +1,55 @@
+
+
+
+
+<!-- LINK BEGIN old/include/head --><!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="/css/old.css">
+  <title>404 - all-other-usernames-were-taken</title>
+  <html lang="en">
+  <meta charset="utf-8"/>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="all-other-usernames-were-taken" />
+  
+  
+ </head>
+ <body>
+  <header>
+   <p class="nav">
+    <nav>
+     <div class="nav_bar">
+      &nbsp;&nbsp;
+      <a class="nav_link" href="/old/index.html">Home</a>&nbsp;
+      <a class="nav_link" href="/old/blog.html">Blog</a>&nbsp;
+      <a class="nav_link" href="/old/stuff/index.html">Stuff</a>&nbsp;
+      <a class="nav_link" href="https://github.com/all-other-usernames-were-taken">GitHub</a>&nbsp;
+      <a class="nav_link" href="https://scratch.mit.edu/users/efils">Scratch</a>&nbsp;
+      <a class="nav_link" href="https://esolangs.org/wiki/User:Not_applicable">Esolangs Wiki</a>
+     </div>
+    </nav>
+   <div class="nav_line"><hr color=lightgrey><span class="nav_title" >Untitled</span></div>
+   </p>
+  </header>
+  <main>
+   <div class="body">
+<!-- LINK END old/include/head -->
+<div class="message">
+ <p>
+  File not found
+  <hr color=black><br>
+  The page specified could not be found.
+  <br><br>
+  &lt;<a class="nav_link_highlighted" href="/old/stuff/notepad.html">OK</a>&gt;
+  &lt;<a class="nav_link" href="/old/index.html">Home</a>&gt;
+ </p>
+</div>
+<!-- LINK BEGIN old/include/foot -->   </div>
+  </main>
+  <footer>
+   <p class="foot">&copy;2020 all-other-usernames-were-taken, all rights reserved, blah blah blah.</p>
+  </footer>
+ </body>
+</html>
+<!-- LINK END old/include/foot -->
