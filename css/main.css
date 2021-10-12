@@ -1,6 +1,7 @@
 html {
   font-family: monospace;
-  background-image: linear-gradient(black, purple);
+  background: linear-gradient(#330033, #550055);
+  min-height: 100vh;
 }
 
 .header_bar {
@@ -8,6 +9,9 @@ html {
   text-align: center;
   position: sticky;
   top: 1%;
+  
+  width: 90%;
+  margin: auto;
   
   background-color: lightgrey;
   opacity: 95%;
@@ -33,7 +37,20 @@ h2 {
   text-align: center;
   max-width: 500pt;
   margin: auto;
+  transform: translateX(-10px) rotate(1deg);
+  transition: transform 1s;
 }
+
 a {
   color: darkblue;
+  font-weight: bolder;
+}
+
+.content:hover {
+  transform: translateX(10px);
+}
+
+@keyframes content_ani {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
