@@ -26,4 +26,4 @@ jobs:
                     github_token: ${{ secrets.GITHUB_TOKEN }}
                     author_name: Not-a-bot
                     message: Run HTML linker
-                    branch: min
+                    branch: main
