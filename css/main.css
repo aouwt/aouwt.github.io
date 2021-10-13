@@ -50,16 +50,15 @@ h2 {
   max-width: 500pt;
   margin: auto;
   /*transform: translateX(-10px) rotate(1deg);*/
-  transition: opacity ease-in-out 1s;
+  transition: opacity ease-in-out .5s;
 }
 
 a {
   color: darkblue;
   font-weight: bolder;
+  transition: color linear .15s;
 }
 
-a:not(:hover) {
-  color: blue;
-}
+a:not(:hover) { color: blue; }
 
 .content:hover { opacity: 100%; }
