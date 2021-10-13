@@ -17,6 +17,14 @@
 		<!--LINKER:IFN:nokwds;
 			<meta name="keywords" content="all-other-usernames-were-taken, efils, givemeagoodun, givemeagooduns_un, untitled person, garbage, garbageTM, kit, kit-ten, kit--, kit-, semi<!-\-LINKER:IF:keywords;, <!-\\-LINKER:PUT:keywords-\\->-\->" />
 		-->
+		<!--LINKER:IFN:bgcolors;
+			<!-\-LINKER:STR:bgcolors:#330033, #550055-\->
+		-->
+		<!--LINKER:IFN:nobg;
+			<style>
+				html { background-image: linear-gradient(<!-\-LINKER:PUT:bgcolors-\->);
+			</style>
+		-->
 		<!--LINKER:PUT:head-->
 	</head>
 	<body>
