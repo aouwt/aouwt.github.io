@@ -1,5 +1,5 @@
 #!/bin/bash
 echo Running linker
 cd src
-./linker bulkmode
+../.ci/linker/linker bulkmode
 cd ..

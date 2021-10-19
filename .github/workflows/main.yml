@@ -11,9 +11,13 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
+            - name: blog.sh
+              shell: bash
+              run: ./.ci/blog.sh/run.sh
+
             - name: Run Linker
               shell: bash
-              run: ./src/linker.sh
+              run: ./.ci/linker/run.sh
 
             - name: Extract branch name
               shell: bash
@@ -25,5 +29,5 @@ jobs:
               with:
                     github_token: ${{ secrets.GITHUB_TOKEN }}
                     author_name: Not-a-bot
-                    message: Run HTML linker
+                    message: CI
                     branch: main
