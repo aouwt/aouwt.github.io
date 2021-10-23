@@ -16,13 +16,13 @@ html {
   opacity: 95%;
   border: 1px white solid;
   z-index: 2;
-  animation: rotate 400s infinite alternate ease-in-out;
-  animation-delay: -200s;
+  animation: rotate 300s infinite alternate ease-in-out;
+  animation-delay: -150s;
 }
 
 .header_bar h1 {
-  animation: rotate 400s infinite alternate ease-in-out;
-  animation-delay: -200s;
+  animation: rotate 300s infinite alternate ease-in-out;
+  animation-delay: -150s;
 }
 
 @keyframes rotate {
@@ -49,7 +49,7 @@ h2 {
   max-width: 500pt;
   margin: auto;
   /*transform: translateX(-10px) rotate(1deg);*/
-  transition: opacity ease-in-out .5s;
+  transition: opacity ease-in-out .25s;
 }
 
 a {
