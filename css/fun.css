@@ -1,0 +1,72 @@
+html {
+  font-family: monospace;
+  min-height: 100vh;
+}
+
+@keyframes color {
+  0% { background-color: purple; }
+  100% {background-color: red; }
+}
+
+.header_bar {
+  width: 100%;
+  text-align: center;
+  position: sticky;
+  top: 1%;
+  
+  width: 90%;
+  margin: auto;
+  
+  background-color: lightgrey;
+  opacity: 95%;
+  border: 1px white solid;
+  z-index: 2;
+  animation: rotate 300s infinite linear;
+}
+
+.header_bar h1 {
+  animation: rotate 150s reverse infinite linear;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+h1 {
+  color: white;
+  text-shadow: .1em .1em black;
+  background-color: rgba(0,0,255, 0.5);
+}
+
+h2 {
+  color: white;
+  text-shadow: .05em .05em black;
+  background-color: rgba(0,0,255, .5);
+}
+.content {
+  background-color: lightgrey;
+  opacity: 100%;
+  border: 1px white solid;
+  text-align: center;
+  max-width: 500pt;
+  margin: auto;
+  transform: translateX(-10px) rotate(1deg);
+  transition: transform ease-in-out 1s;
+}
+
+a {
+  color: whitesmoke;
+  font-weight: bolder;
+  transition: color linear .15s;
+  font-family: serif;
+  font-size: 200%;
+}
+
+a:not(:hover) {
+  color: blue;
+  font-family: monospace;
+  font-size: 100%;
+}
+
+.content:hover { opacity: 10%; transform: translateX(10px) rotate(-1deg); }
