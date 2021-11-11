@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="/css/main.css">
+		<!--LINKER:IF:fun;<link rel="stylesheet" href="/css/fun.css">-->
+		<!--LINKER:IFN:fun;<link rel="stylesheet" href="/css/main.css">-->
 		<title><!--LINKER:PUT:name--></title>
 		<html lang="en">
 		<meta charset="utf-8"/>
@@ -29,7 +30,8 @@
 	</head>
 	<body>
 		<div class="header_bar">
-			<h1>kit's internet thing</h1>
+			<!--LINKER:IF:fun;<h1>cascading stylesheets</h1>-->
+			<!--LINKER:IFN:fun;<h1>kit's internet thing</h1>-->
 			<sup>its called a website you dumbfuck</sup>
 			<!--<div class="marquee">
 			<span>why are you here</span>
