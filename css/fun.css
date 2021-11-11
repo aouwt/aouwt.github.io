@@ -64,4 +64,4 @@ a:not(:hover) {
   font-size: 100%;
 }
 
-.content:hover { opacity: 10%; transform: translateX(1000px) rotate(-360deg); }
+.content:hover { opacity: 10%; transform: translateX(1000px) rotate(-3600deg); }
